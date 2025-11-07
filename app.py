@@ -457,6 +457,11 @@ def delete_book(book_id):
     flash('Book deleted successfully!', 'success')
     return redirect(url_for('manage_books'))
 
+@app.route('/reports', endpoint='reports')
+def reports():
+    # prepare data for the template as needed
+    return render_template('reports.html')
+
 # ------------------- RUN SERVER ------------------- #
 
 if __name__ == '__main__':
